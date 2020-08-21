@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.HomeController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="600" prefWidth="900" style="-fx-background-color: #f5f6fa;">
+         <children>
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="97.0" prefWidth="871.0" style="-fx-background-color: #ededed;">
+               <children>
+                  <Pane layoutX="660.0" prefHeight="97.0" prefWidth="2.0" style="-fx-background-color: grey;" />
+                  <Button fx:id="connectBtn" layoutX="528.0" layoutY="14.0" mnemonicParsing="false" onAction="#connect" prefHeight="25.0" prefWidth="104.0" text="Connect" />
+                  <Button fx:id="disconnectBtn" layoutX="528.0" layoutY="57.0" mnemonicParsing="false" onAction="#disconnect" prefHeight="25.0" prefWidth="104.0" text="Disconnect" />
+                  <Label layoutX="689.0" layoutY="18.0" text="CONNECTION STATUS">
+                     <font>
+                        <Font name="HP Simplified" size="18.0" />
+                     </font>
+                  </Label>
+                  <Pane fx:id="statusColor" layoutX="690.0" layoutY="49.0" prefHeight="25.0" prefWidth="158.0" style="-fx-background-color: red;">
+                     <children>
+                        <Label fx:id="statusMessage" contentDisplay="BOTTOM" layoutX="36.0" layoutY="4.0" text="DISCONNECTED" textFill="WHITE">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets></Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <TextField fx:id="userName" layoutX="37.0" layoutY="53.0" prefHeight="25.0" prefWidth="150.0" />
+            <TextField fx:id="userPass" layoutX="202.0" layoutY="53.0" prefHeight="25.0" prefWidth="150.0" />
+            <Text fill="#6e6e6e" layoutX="37.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" />
+            <Text fill="#6f6f6f" layoutX="203.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
+            <Text fill="#6e6e6e" layoutX="368.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Server IP:" />
+            <TextField fx:id="serverIP" layoutX="366.0" layoutY="52.0" prefHeight="25.0" prefWidth="150.0" />
+            <Pane layoutX="15.0" layoutY="128.0" prefHeight="458.0" prefWidth="871.0" style="-fx-background-color: #ededed;">
+               <children>
+                  <Label layoutX="173.0" layoutY="61.0" text="Enter file name to send">
+                     <font>
+                        <Font name="HP Simplified" size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="fileNameToUpload" layoutX="433.0" layoutY="62.0" promptText="e.g file.txt" />
+                  <Button fx:id="fileUploadBtn" layoutX="607.0" layoutY="62.0" mnemonicParsing="false" onAction="#UploadFile" prefHeight="25.0" prefWidth="91.0" text="Upload File" />
+                  <Label layoutX="173.0" layoutY="126.0" text="Enter file name to retrive">
+                     <font>
+                        <Font name="HP Simplified" size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="fileNameToReceive" layoutX="433.0" layoutY="127.0" promptText="e.g file.txt" />
+                  <Button fx:id="downloadFile" layoutX="607.0" layoutY="127.0" mnemonicParsing="false" onAction="#DownloadFile" text="Download File" />
+                  <Pane layoutX="26.0" layoutY="388.0" prefHeight="41.0" prefWidth="820.0" style="-fx-background-color: #353b48;">
+                     <children>
+                        <Label fx:id="loggingTxt" layoutX="19.0" layoutY="13.0" textFill="#2cc30e">
+                           <font>
+                              <Font name="Fira Code Regular" size="12.0" />
+                           </font></Label>
+                     </children>
+                  </Pane>
+                  <Label layoutX="165.0" layoutY="267.0" prefHeight="65.0" prefWidth="526.0" text="To Send/Receive any file to Server side, please paste your file in the Storage folder first then you can Send that file to Server Side." textAlignment="CENTER" textFill="#1156bc" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="338.0" layoutY="191.0" prefHeight="41.0" prefWidth="227.0" style="-fx-background-color: #f5f6fa;">
+                     <children>
+                        <Label layoutX="32.0" layoutY="9.0" text="src / Client / Storage / " textAlignment="CENTER" textFill="#868686">
+                           <font>
+                              <Font name="Calibri" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</GridPane>
